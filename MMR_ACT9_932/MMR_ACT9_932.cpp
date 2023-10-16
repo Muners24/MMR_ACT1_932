@@ -1,3 +1,8 @@
+/* Mejía Martínez, Ramón    372099                                    */
+/* 30 de septiembre de 2023                                           */
+/* Manejo de arreglos imprecion, asignacion, ordenacion, busqueda     */
+/* MMR_ACT9_932                                                     */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>

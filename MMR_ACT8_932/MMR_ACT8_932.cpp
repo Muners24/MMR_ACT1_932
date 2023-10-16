@@ -1,7 +1,7 @@
 /* Mejía Martínez, Ramón    372099                                    */
 /* 1 de octubre de 2023                                               */
 /* Manejo de arreglos, lectura, asignacion, concatenacion, mostrar    */
-/* MMR_ACT1_1_932                                                     */
+/* MMR_ACT8_932                                                     */
 
 #include <stdio.h>
 #include <stdlib.h>
