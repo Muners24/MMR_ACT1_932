@@ -21,6 +21,7 @@ void printVector(int vect[],int m);
 int unirVector1_2(int vect1[],int vect2[],int vect3[],int v1,int v2);
 int llenaMatriz(int vect1[],int vect2[],int matriz[][NM],int v1,int v2);
 void printMatriz(int matriz[][NM],int m1);
+int busqueda_sec(int vect[],int n,int num);
 
 int main()
 {
@@ -150,11 +151,15 @@ int llenaVector(int vect1[])
 
 int randVector(int vect2[])
 {   
-    int i;
+    int i,num;
     srand(time(NULL));
     for(i=0;i<M;i++)
     {
-        vect2[i]=(rand()%20)+1;
+        do
+        {
+            num=(rand()%20)+1;
+        }while(busqueda_sec(vect2,M,num)!=-1);
+        vect2[i]=num;
     }
     printf("\nSe lleno el vector 2\n");
     return 1;
@@ -252,4 +257,17 @@ void printMatriz(int matriz[][NM],int m1)
     {
         printf("\nLa matriz esta vacia\n");
     }
+}
+
+int busqueda_sec(int vect[],int n,int num)
+{
+    int i;
+    for(i=0;i<n;i++)
+    {
+        if(num==vect[i])
+        {
+            return i;
+        }
+    }
+    return -1;
 }

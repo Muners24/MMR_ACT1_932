@@ -53,7 +53,7 @@ void menu(void)
         switch(op)
         {
             case 1:
-                v1=randVector(vect,M,100,200);
+                v1=randVectorACT9(vect,M,100,200);
                 printf("\nSe lleno el vector aletorio\n");
                 break;
             case 2:
