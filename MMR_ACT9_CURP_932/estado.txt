@@ -1,0 +1,102 @@
+0   0 appat
+1   voc izq ap pat != 0
+2   0 apmat
+3   0 name
+4   año dos digitos
+5   
+6   mes dos digitos
+7   
+8   dia dos digitos
+9  
+10  Sexo
+11  0 estado
+12  last consonante estado (lista)
+13  izq cons appat != 0
+14  izq cons apmat != 0
+15  izq cons name  != 0
+16  segun año nacimiento
+17  random
+
+
+printf("1) Aguascalientes\n");
+printf("2) Baja California\n");
+printf("3) Baja California Sur\n");
+printf("4) Campeche\n");
+printf("5) Chiapas\n");
+printf("6) Chihuahua\n");
+printf("7) Ciudad de México\n");
+printf("8) Coahuila\n");
+printf("9) Colima\n");
+printf("10) Durango\n");
+printf("11) Guanajuato\n");
+printf("12) Guerrero\n");
+printf("13) Hidalgo\n");
+printf("14) Jalisco\n");
+printf("15) México\n");
+printf("16) Michoacán\n");
+printf("17) Morelos\n");
+printf("18) Nayarit\n");
+printf("19) Nuevo León\n");
+printf("20) Oaxaca\n");
+printf("21) Puebla\n");
+printf("22) Querétaro\n");
+printf("23) Quintana Roo\n");
+printf("24) San Luis Potosí\n");
+printf("25) Sinaloa\n");
+printf("26) Sonora\n");
+printf("27) Tabasco\n");
+printf("28) Tamaulipas\n");
+printf("29) Tlaxcala\n");
+printf("30) Veracruz\n");
+printf("31) Yucatán\n");
+printf("32) Zacatecas\n");
+printf("33. Extranjero\n");
+
+
+QUERéTARO QT
+
+QUINTANA ROO QR
+CAMPECHE cc
+
+SAN LUIS Potosí SP
+
+NUEVO LE”N  Nl
+
+BAJA CALIFORNIA bc
+BAJA CALIFORNIA SUR   bs
+
+Extranjero NE
+
+
+AGUASCALIENTES AS
+BAJA CALIFORNIA BC
+BAJA CALIFORNIA SUR BS
+CAMPECHE CC
+COAHUILA CL
+COLIMA CM
+CHIAPAS CS
+CHIHUAHUA CH
+DISTRITO FEDERAL DF
+DURANGO DG
+GUANAJUATO GT
+GUERRERO GR
+HIDALGO HG
+JALISCO JC
+M…XICO MC
+MICHOAC£N MN
+MORELOS MS
+NAYARIT NT
+NUEVO LE”N NL
+OAXACA OC
+PUEBLA PL
+QUER…TARO QT
+QUINTANA ROO QR
+SAN LUIS POTOSÕ SP
+SINALOA SL
+SONORA SR
+TABASCO TC
+TAMAULIPAS TS
+TLAXCALA TL
+VERACRUZ VZ
+YUCAT£N YN
+ZACATECAS ZS

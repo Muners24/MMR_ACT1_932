@@ -134,3 +134,4 @@ void searchVectorACT9(int vect[],int n,int v1)
         printf("\nEl vector esta vacio\n");
     }
 }
+
