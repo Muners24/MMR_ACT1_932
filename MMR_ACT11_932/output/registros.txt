@@ -1,0 +1,201 @@
+| No   | Est | Matri  | Apellido Paterno | Apellido Materno | Nombre              | Ed  | Sex |        CURP        |
+|    0 | MS  | 318917 | ROSAS            | FERNANDEZ        | VICENTE             |  72 |  H  | ROFV510922HMSSRC54 |
+|    1 | VZ  | 320791 | MORALES          | MARTINEZ         | IRENE JUDITH        | 106 |  M  | MOMI171015MVZRRR15 |
+|    2 | YN  | 309834 | ALVAREZ          | X                | RAMIRO              |  80 |  H  | AAXR430519HYNLXM44 |
+|    3 | MN  | 303161 | FERNANDEZ        | LEON             | CRISTINA            |  97 |  M  | FELC260529MMNRNR24 |
+|    4 | CS  | 303913 | ORTIZ            | NAVARRO          | CLAUDIA             |  47 |  M  | OINC760615MCSRVL77 |
+|    5 | AS  | 328354 | VEGA             | PEREZ            | HILDA               | 114 |  M  | VEPH090722MASGRL04 |
+|    6 | MN  | 314569 | MENDOZA          | IBARRA           | JULIO               |  21 |  H  | MEIJ021010HMNNBLA7 |
+|    7 | VZ  | 313011 | RIOS             | DIAZ             | ALVARO              |   8 |  H  | RIDA150210HVZSZLB2 |
+|    8 | TC  | 305279 | MALDONADO        | ROJAS            | LEONARDO            |  85 |  H  | MARL380128HTCLJN30 |
+|    9 | BC  | 321457 | GARCIA           | RIVERA           | ROSA                |  80 |  M  | GARR430529MBCRVS45 |
+|   10 | TL  | 306128 | DE LA CRUZ       | SANCHEZ          | ISABEL              |  58 |  M  | CUSI650825MTLRNS69 |
+|   11 | TS  | 313665 | FERNANDEZ        | CAMACHO          | ABEL                |  54 |  H  | FECA690218HTSRMB68 |
+|   12 | GT  | 319077 | MARQUEZ          | MEZA             | ALONSO              |  60 |  H  | MAMA630228HGTRZL63 |
+|   13 | JC  | 323314 | CRUZ             | SALGADO          | NORMA               |  41 |  M  | CUSN820422MJCRLR85 |
+|   14 | HG  | 301454 | CARRILLO         | FUENTES          | BEATRIZ             |  35 |  M  | CAFB880223MHGRNT88 |
+|   15 | TC  | 312241 | RIVERA           | ROSALES          | ABEL                |  27 |  H  | RIRA960402HTCVSB97 |
+|   16 | MX  | 317372 | ACOSTA           | GUTIERREZ        | RODOLFO             |  84 |  H  | AOGR381228HMXCTD36 |
+|   17 | TL  | 323924 | MENDOZA          | VAZQUEZ          | ADRIANA VERONICA    |  82 |  M  | MEVA410604MTLNZD46 |
+|   18 | CH  | 316754 | SOSA             | HERRERA          | LORENA ALEJANDRA    |  58 |  M  | SOHL651003MCHSRR65 |
+|   19 | EM  | 304121 | RAMIREZ          | X                | LOURDES             | 113 |  M  | RAXL100724MEMMXR15 |
+|   20 | TS  | 325561 | ROJAS            | X                | JOSEFINA            |  56 |  M  | ROXJ670221MTSJXS65 |
+|   21 | TC  | 308744 | LOPEZ            | LOPEZ            | JULIAN              |  31 |  H  | LOLJ911128HTCPPL95 |
+|   22 | SP  | 303985 | NAVARRO          | GONZALEZ         | LUCIA               |  18 |  M  | NAGL050624MSPVNCA9 |
+|   23 | PL  | 315060 | GUZMAN           | VARGAS           | ANGEL               |  78 |  H  | GUVA450616HPLZRN42 |
+|   24 | TS  | 306036 | GONZALEZ         | LOPEZ            | RODRIGO             |  28 |  H  | GOLR950305HTSNPD93 |
+|   25 | DG  | 320123 | RAMOS            | X                | CRISTINA            | 116 |  M  | RAXC070902MDGMXR08 |
+|   26 | TC  | 305632 | LEON             | RIOS             | CARMEN              |  19 |  M  | LERC040608MTCNSRA4 |
+|   27 | ZS  | 329773 | GUERRERO         | VEGA             | OLIVIA              |  68 |  M  | GUVO550927MZSRGL59 |
+|   28 | NL  | 313459 | REYES            | ROSAS            | OLGA                | 111 |  M  | RERO120523MNLYSL14 |
+|   29 | NE  | 304582 | GARCIA           | ROMERO           | MAGDALENA           |  80 |  M  | GARM431006MNERMG42 |
+|   30 | MN  | 332455 | SANDOVAL         | X                | CARLOS              |  84 |  H  | SAXC390713HMNNXR39 |
+|   31 | DG  | 321827 | SOLIS            | SANTOS           | GABRIELA            |  87 |  M  | SOSG360912MDGLNB34 |
+|   32 | CS  | 308258 | RUIZ             | X                | MIGUEL              |  71 |  H  | RUXM520121HCSZXG59 |
+|   33 | CM  | 318328 | MEZA             | X                | MARISOL             | 122 |  M  | MEXM010804MCMZXR02 |
+|   34 | TL  | 304507 | MOLINA           | RIVERA           | MAGDALENA           | 122 |  M  | MORM010414MTLLVG01 |
+|   35 | DG  | 308939 | SANTOS           | MEDINA           | JOSEFINA            |  89 |  M  | SAMJ340221MDGNDS31 |
+|   36 | SR  | 307595 | ESPINOSA         | CASTRO           | CONCEPCION          |  92 |  M  | EICC311001MSRSSN31 |
+|   37 | BS  | 325535 | FLORES           | ALVARADO         | REYNA               |  63 |  M  | FOAR600627MBSLLY69 |
+|   38 | JC  | 311816 | MENDOZA          | SANCHEZ          | JOSUE               |  59 |  H  | MESJ640601HJCNNS60 |
+|   39 | NE  | 301569 | CRUZ             | RODRIGUEZ        | PEDRO ANDRES        | 122 |  H  | CURP010323HNERDD09 |
+|   40 | NL  | 313643 | LOPEZ            | X                | BERTHA              | 106 |  M  | LOXB170829MNLPXR18 |
+|   41 | NE  | 315167 | MEJIA            | CARRILLO         | ADRIANA             | 104 |  M  | MECA181220MNEJRD16 |
+|   42 | TL  | 319835 | ALVARADO         | CRUZ             | GUADALUPE           |  87 |  M  | AACG360924MTLLRD31 |
+|   43 | GR  | 314699 | DIAZ             | LARA             | IVAN                |  85 |  H  | DILI381006HGRZRV36 |
+|   44 | BS  | 318645 | ESPINOZA         | OROZCO           | BLANCA              |  88 |  M  | EIOB350130MBSSRL38 |
+|   45 | DG  | 307067 | ESTRADA          | ORTIZ            | CLAUDIA             | 117 |  M  | EAOC060329MDGSRL06 |
+|   46 | DG  | 324739 | MIRANDA          | SALGADO          | LUCIA CAROLINA      |  19 |  M  | MISL040502MDGRLCA3 |
+|   47 | GT  | 310507 | RUIZ             | TORRES           | NANCY MARTHA        |  57 |  M  | RUTN660628MGTZRN67 |
+|   48 | QR  | 312774 | JIMENEZ          | ORTEGA           | OLGA                | 118 |  M  | JIOO050826MQRMRL04 |
+|   49 | SL  | 322699 | MEDINA           | NAVA             | RAMON               |  46 |  H  | MENR770606HSLDVM78 |
+|   50 | PL  | 309229 | CAMPOS           | MEDINA           | IRENE               |  15 |  M  | CAMI080125MPLMDRA1 |
+|   51 | CM  | 320704 | SANDOVAL         | OROZCO           | VICENTE             |  57 |  H  | SAOV660819HCMNRC65 |
+|   52 | EM  | 302191 | FUENTES          | MEZA             | HILDA OLIVIA        |  38 |  M  | FUMH850614MEMNZL82 |
+|   53 | HG  | 328898 | SANTOS           | LEON             | DELIA               |  61 |  M  | SALD620317MHGNNL67 |
+|   54 | GT  | 320378 | REYES            | LARA             | EDITH               |  43 |  M  | RELE800518MGTYRD82 |
+|   55 | CS  | 317239 | AGUILAR          | CABRERA          | JOSEFINA MARIA      |  70 |  M  | AUCJ521212MCSGBS59 |
+|   56 | SL  | 316042 | HERNANDEZ        | DE LA CRUZ       | GUADALUPE LILIA     |  53 |  M  | HECG700516MSLRRD72 |
+|   57 | GR  | 314800 | CERVANTES        | AGUIRRE          | OSCAR               | 114 |  H  | CEAO091030HGRRGS05 |
+|   58 | TS  | 306476 | VALENCIA         | CERVANTES        | AGUSTINA            |  34 |  M  | VXCA890405MTSLRG87 |
+|   59 | GT  | 326835 | SANCHEZ          | DE LA CRUZ       | LETICIA             | 117 |  M  | SACL060110MGTNRT01 |
+|   60 | CC  | 313330 | MARTINEZ         | FERNANDEZ        | MARTIN CARLOS       |  74 |  H  | MAFM490406HCCRRR40 |
+|   61 | TS  | 328186 | RAMIREZ          | CABRERA          | GERMAN              |  92 |  H  | RACG310201HTSMBR36 |
+|   62 | EM  | 317617 | TORRES           | X                | JULIO ADOLFO        |  16 |  H  | TOXJ061215HEMRXLA7 |
+|   63 | NL  | 316239 | VALENCIA         | MEZA             | JOSEFINA            |  50 |  M  | VAMJ731021MNLLZS78 |
+|   64 | SL  | 308102 | AGUILAR          | SOSA             | MARTHA              |  55 |  M  | AUSM680219MSLGSR64 |
+|   65 | CL  | 311743 | JIMENEZ          | REYES            | DANIEL              |  92 |  H  | JIRD301122HCLMYN33 |
+|   66 | HG  | 328857 | MOLINA           | OROZCO           | MARCO               |   9 |  H  | MOOM141029HHGLRRB2 |
+|   67 | MX  | 315553 | CASTRO           | SOLIS            | NOE                 |  32 |  H  | CASN910506HMXSLX90 |
+|   68 | AS  | 306258 | DOMINGUEZ        | VELASCO          | SERGIO              |  84 |  H  | DOVS390309HASMLR30 |
+|   69 | ZS  | 312399 | LEON             | CASTRO           | CARLOS              | 118 |  H  | LECC050320HZSNSR06 |
+|   70 | CS  | 322526 | NAVA             | SOTO             | ISMAEL              |  18 |  H  | NASI050816HCSVTSA3 |
+|   71 | NE  | 320936 | TORRES           | CARRILLO         | ADOLFO              |  70 |  H  | TOCA530814HNERRD52 |
+|   72 | OC  | 323759 | SANDOVAL         | MEDINA           | HUGO EMMANUEL       |  10 |  H  | SAMH121212HOCNDGB5 |
+|   73 | AS  | 313291 | REYES            | VARGAS           | RICARDO             | 123 |  H  | REVR000507HASYRC06 |
+|   74 | SL  | 311996 | BAUTISTA         | AGUIRRE          | PILAR               |   7 |  M  | BAAP160413MSLTGLB1 |
+|   75 | QT  | 312322 | HERNANDEZ        | GARCIA           | HUGO                |  47 |  H  | HEGH751215HQTRRG75 |
+|   76 | JC  | 302759 | NAVARRO          | VALDEZ           | ANA                 |  65 |  M  | NAVA580310MJCVLN58 |
+|   77 | OC  | 328605 | SANTOS           | GUERRERO         | LETICIA             |  72 |  M  | SAGL510228MOCNRT59 |
+|   78 | SP  | 326218 | CAMPOS           | JUAREZ           | RAMIRO              |  16 |  H  | CAJR070606HSPMRMA1 |
+|   79 | AS  | 319569 | MEJIA            | MORALES          | PEDRO               |   6 |  H  | MEMP170509HASJRDB1 |
+|   80 | JC  | 326818 | CASTILLO         | SANTIAGO         | ALVARO              |  79 |  H  | CASA440427HJCSNL43 |
+|   81 | NE  | 324036 | JIMENEZ          | CERVANTES        | AGUSTINA            |  68 |  M  | JICA550621MNEMRG53 |
+|   82 | VZ  | 301920 | LEON             | LUNA             | OCTAVIO             |  48 |  H  | LELO750227HVZNNC75 |
+|   83 | CM  | 303889 | AVILA            | MORENO           | LEONARDO            |  38 |  H  | AIML850821HCMVRN82 |
+|   84 | QT  | 317547 | SOSA             | VEGA             | FELIX               |  87 |  H  | SOVF361002HQTSGL33 |
+|   85 | TL  | 301129 | MARTINEZ         | ESPINOZA         | ALFONSO             |  26 |  H  | MAEA970919HTLRSL98 |
+|   86 | QT  | 315226 | SOTO             | MEJIA            | ANGELICA            | 113 |  M  | SOMA100506MQTTJN19 |
+|   87 | QR  | 320494 | BAUTISTA         | ESTRADA          | EUGENIA             | 110 |  M  | BAEE130210MQRTSG17 |
+|   88 | CS  | 332540 | OROZCO           | NAVA             | SERGIO JAIME        |  93 |  H  | OONS301022HCSRVR31 |
+|   89 | CS  | 308600 | CRUZ             | GONZALEZ         | GILBERTO            |  59 |  H  | CUGG640306HCSRNL62 |
+|   90 | JC  | 300272 | RUIZ             | RIVERA           | EDITH               |  67 |  M  | RURE551207MJCZVD53 |
+|   91 | NE  | 315434 | ORTIZ            | VELAZQUEZ        | JULIAN ISRAEL       |  65 |  H  | OIVJ580320HNERLL51 |
+|   92 | MN  | 332229 | VAZQUEZ          | X                | NANCY               |   5 |  M  | VAXN180618MMNZXNB5 |
+|   93 | TS  | 323649 | CAMACHO          | ESPINOZA         | AGUSTINA            |  95 |  M  | CAEA280128MTSMSG28 |
+|   94 | SR  | 310337 | VALENCIA         | RODRIGUEZ        | GUADALUPE           |  95 |  H  | VARG280511HSRLDD27 |
+|   95 | MX  | 323907 | AVILA            | X                | YANET               |  34 |  M  | AIXY881102MMXVXN80 |
+|   96 | BC  | 301223 | HERRERA          | ESPINOZA         | CATALINA            |  45 |  M  | HEEC780913MBCRST73 |
+|   97 | CL  | 302910 | LEON             | ORTEGA           | ERIKA               |  32 |  M  | LEOE910918MCLNRR91 |
+|   98 | VZ  | 307946 | LEON             | ROJAS            | GABRIEL             |  96 |  H  | LERG270725HVZNJB28 |
+|   99 | TC  | 308378 | VARGAS           | ROSALES          | OCTAVIO             |  83 |  H  | VARO400422HTCRSC41 |
+|  100 | TL  | 304629 | TORRES           | LARA             | MOISES              |  97 |  H  | TOLM260305HTLRRS26 |
+|  101 | TC  | 320683 | VALENCIA         | IBARRA           | IRMA                |  55 |  M  | VAII680309MTCLBR67 |
+|  102 | YN  | 311552 | VALENCIA         | RIOS             | FERNANDO            |  30 |  H  | VARF930510HYNLSR93 |
+|  103 | GR  | 310165 | GUTIERREZ        | FERNANDEZ        | GUADALUPE           |   9 |  M  | GUFG140725MGRTRDB4 |
+|  104 | MX  | 325241 | MORENO           | RIVERA           | MARCO               |  95 |  H  | MORM280130HMXRVR26 |
+|  105 | YN  | 304495 | MIRANDA          | X                | IRMA                |  10 |  M  | MIXI130123MYNRXRB5 |
+|  106 | CH  | 301297 | DIAZ             | GUTIERREZ        | ESPERANZA MARICELA  |  98 |  M  | DIGE250624MCHZTS26 |
+|  107 | CC  | 312260 | HERNANDEZ        | PINEDA           | RICARDO             | 100 |  H  | HEPR230320HCCRNC21 |
+|  108 | SR  | 330604 | RIOS             | X                | JULIO ALEJANDRO     | 101 |  H  | RIXJ220514HSRSXL28 |
+|  109 | MN  | 332563 | SOSA             | SOSA             | SANDRA ELVIA        |  41 |  M  | SOSS820322MMNSSN88 |
+|  110 | BC  | 314520 | GUTIERREZ        | RODRIGUEZ        | CLAUDIA             |  98 |  M  | GURC250615MBCTDL28 |
+|  111 | TC  | 318610 | ALVAREZ          | DE LA CRUZ       | DULCE               |  94 |  M  | AACD290306MTCLRL25 |
+|  112 | SP  | 327515 | ROBLES           | ROJAS            | JOSEFINA            |  79 |  M  | RORJ431213MSPBJS43 |
+|  113 | MS  | 329878 | ROBLES           | FLORES           | CESAR               |  70 |  H  | ROFC530109HMSBLS50 |
+|  114 | CC  | 331004 | DOMINGUEZ        | X                | RENE                |   0 |  H  | DOXR230228HCCMXNC7 |
+|  115 | GT  | 306086 | MORENO           | GUZMAN           | MARCOS              |  35 |  H  | MOGM880915HGTRZR82 |
+|  116 | HG  | 305103 | SALAZAR          | MALDONADO        | NORMA               |  51 |  M  | SAMN721006MHGLLR79 |
+|  117 | BC  | 317290 | LARA             | RUIZ             | FRANCISCO           |   9 |  H  | LARF140814HBCRZRB9 |
+|  118 | AS  | 309837 | NAVARRO          | X                | PEDRO               |  24 |  H  | NAXP981129HASVXD98 |
+|  119 | CC  | 302951 | DIAZ             | VAZQUEZ          | KARLA               | 103 |  M  | DIVK200724MCCZZR22 |
+|  120 | NT  | 318505 | HERRERA          | X                | EVA                 |  81 |  M  | HEXE411210MNTRXV42 |
+|  121 | MN  | 329095 | VELASCO          | IBARRA           | SONIA               |  22 |  M  | VEIS010624MMNLBNA6 |
+|  122 | GT  | 327989 | MENDOZA          | PEREZ            | RAYMUNDO            |  90 |  H  | MEPR330418HGTNRY30 |
+|  123 | SP  | 311184 | SALAS            | AVILA            | TOMAS               |  27 |  H  | SAAT960530HSPLVM92 |
+|  124 | HG  | 312855 | ROMERO           | X                | MAGDALENA           | 101 |  M  | ROXM220510MHGMXG27 |
+|  125 | CH  | 302597 | CASTRO           | CABRERA          | CECILIA ALEJANDRINA | 101 |  M  | CACC220827MCHSBC20 |
+|  126 | NT  | 306170 | CONTRERAS        | SALAS            | MARTIN              |  34 |  H  | COSM890731HNTNLR82 |
+|  127 | TC  | 315250 | LOPEZ            | ROJAS            | EVA                 | 104 |  M  | LORE190213MTCPJV16 |
+|  128 | HG  | 327015 | OROZCO           | BAUTISTA         | JOSEFINA            |  91 |  M  | OOBJ311226MHGRTS35 |
+|  129 | ZS  | 309952 | GUERRERO         | OROZCO           | VICENTE RAUL        |  49 |  H  | GUOV740226HZSRRC73 |
+|  130 | CL  | 332763 | DOMINGUEZ        | X                | AGUSTINA            |  46 |  M  | DOXA761216MCLMXG79 |
+|  131 | BS  | 328101 | JUAREZ           | LEON             | ESTELA              |  25 |  M  | JULE980111MBSRNS94 |
+|  132 | CH  | 321774 | AGUILAR          | SOLIS            | FRANCISCA           |  33 |  M  | AUSF900711MCHGLR97 |
+|  133 | AS  | 310701 | AVILA            | SERRANO          | ALICIA              |  28 |  M  | AISA941115MASVRL96 |
+|  134 | OC  | 317569 | CHAVEZ           | CHAVEZ           | MARIA               |  27 |  M  | CACM960414MOCHHR98 |
+|  135 | VZ  | 326714 | JIMENEZ          | RAMIREZ          | GILBERTO            |  61 |  H  | JIRG611112HVZMML62 |
+|  136 | GT  | 307599 | NAVA             | X                | ENRIQUE             |  49 |  H  | NAXE740104HGTVXN77 |
+|  137 | BC  | 310690 | LEON             | GARCIA           | ANA HILDA           |  21 |  M  | LEGA020103MBCNRNA1 |
+|  138 | ZS  | 325640 | SANCHEZ          | GUZMAN           | MARGARITA ELENA     |  57 |  M  | SAGM660131MZSNZR61 |
+|  139 | HG  | 313326 | SALGADO          | ACOSTA           | ULISES GILBERTO     |  27 |  H  | SAAU961017HHGLCL99 |
+|  140 | NE  | 325358 | ROMERO           | ALVAREZ          | JULIAN              |  75 |  H  | ROAJ471221HNEMLL40 |
+|  141 | YN  | 332150 | IBARRA           | VEGA             | LIDIA               |  27 |  M  | IAVL960912MYNBGD92 |
+|  142 | DG  | 324703 | ACOSTA           | GUZMAN           | RAMON               |  89 |  H  | AOGR340606HDGCZM31 |
+|  143 | BC  | 300701 | RODRIGUEZ        | MEZA             | ISELA ANA           |  55 |  M  | ROMI680608MBCDZS60 |
+|  144 | NL  | 325024 | RODRIGUEZ        | NAVA             | PILAR ESTHER        |  70 |  M  | RONP531024MNLDVL56 |
+|  145 | JC  | 309302 | CASTILLO         | X                | CATALINA            |  20 |  M  | CAXC030403MJCSXTA8 |
+|  146 | HG  | 323897 | CRUZ             | VARELA           | JOSEFINA            |  12 |  M  | CUVJ110517MHGRRSB4 |
+|  147 | YN  | 326571 | SANDOVAL         | BAUTISTA         | GUADALUPE           |  33 |  M  | SABG900420MYNNTD94 |
+|  148 | SP  | 301022 | MENDOZA          | CASTILLO         | GUSTAVO             | 120 |  H  | MECG030202HSPNSS00 |
+|  149 | HG  | 316289 | SOSA             | CAMPOS           | YANET               |  24 |  M  | SOCY990525MHGSMN95 |
+|  150 | SR  | 313540 | ESPINOZA         | MIRANDA          | ANTONIO PABLO       |  17 |  H  | EIMA060113HSRSRNA8 |
+|  151 | HG  | 320081 | TREJO            | TREJO            | FERNANDO MARCO      |  71 |  H  | TETF520216HHGRRR59 |
+|  152 | MX  | 332344 | AVILA            | ROBLES           | JOEL HUGO           |  38 |  H  | AIRJ850317HMXVBL88 |
+|  153 | NL  | 318840 | VALENCIA         | ROBLES           | CATALINA            |  82 |  M  | VARC410522MNLLBT47 |
+|  154 | PL  | 313004 | SOSA             | SERRANO          | SERGIO              |   4 |  H  | SOSS190909HPLSRRB1 |
+|  155 | MX  | 303820 | SALAZAR          | CAMPOS           | IRMA                |  41 |  M  | SACI820707MMXLMR86 |
+|  156 | JC  | 314259 | BAUTISTA         | FLORES           | PATRICIA            |  35 |  M  | BAFP880510MJCTLT89 |
+|  157 | QR  | 314023 | SILVA            | CABRERA          | DIANA MAGDALENA     | 103 |  M  | SICD200727MQRLBN22 |
+|  158 | QR  | 317206 | MORENO           | X                | CESAR               |  63 |  H  | MOXC600920HQRRXS60 |
+|  159 | OC  | 302827 | JIMENEZ          | MEJIA            | JUDITH              |  45 |  M  | JIMJ780202MOCMJD70 |
+|  160 | TS  | 312811 | CARRILLO         | X                | BERENICE            |  11 |  M  | CAXB120730MTSRXRB4 |
+|  161 | CM  | 321313 | NAVA             | CASTRO           | GABRIELA MAYRA      |  47 |  M  | NACG751109MCMVSB71 |
+|  162 | ZS  | 325350 | RAMOS            | ROBLES           | LUZ                 |  45 |  M  | RARL780528MZSMBZ72 |
+|  163 | DG  | 315576 | JUAREZ           | MORENO           | JOSEFINA            |  86 |  M  | JUMJ361229MDGRRS31 |
+|  164 | TL  | 306313 | CAMACHO          | X                | LUCIA               |  14 |  M  | CAXL090429MTLMXCA1 |
+|  165 | NE  | 313136 | RANGEL           | PEREZ            | GABRIELA            | 112 |  M  | RAPG110913MNENRB16 |
+|  166 | CH  | 312922 | ORTIZ            | OROZCO           | LUIS                | 103 |  H  | OIOL201006HCHRRS22 |
+|  167 | CM  | 323259 | ROJAS            | DOMINGUEZ        | ANTONIA             |  33 |  M  | RODA900823MCMJMN95 |
+|  168 | CH  | 315524 | ROMERO           | JIMENEZ          | KARINA              |  14 |  M  | ROJK081130MCHMMRA7 |
+|  169 | CL  | 304020 | REYES            | MORALES          | ALBERTO             |  46 |  H  | REMA770523HCLYRL76 |
+|  170 | DG  | 319410 | CERVANTES        | MORALES          | ROGELIO             |  73 |  H  | CEMR500406HDGRRG52 |
+|  171 | JC  | 303367 | SALAS            | X                | OMAR                |  40 |  H  | SAXO830809HJCLXM84 |
+|  172 | CM  | 303377 | ESPINOSA         | HERRERA          | RAMIRO              |   6 |  H  | EIHR170730HCMSRMB5 |
+|  173 | CS  | 322059 | ROSAS            | ALVARADO         | LORENA MAYRA        |  73 |  M  | ROAL500618MCSSLR59 |
+|  174 | SL  | 328982 | JIMENEZ          | CABRERA          | OMAR                |  48 |  H  | JICO741202HSLMBM71 |
+|  175 | CC  | 321476 | ROSALES          | SANDOVAL         | OLGA                |  83 |  M  | ROSO391203MCCSNL30 |
+|  176 | ZS  | 302294 | MEDINA           | X                | LILIA               |  78 |  M  | MEXL441224MZSDXL40 |
+|  177 | NL  | 300535 | CORTES           | ORTIZ            | MONICA              |  44 |  M  | COOM790301MNLRRN72 |
+|  178 | GT  | 330282 | ALVARADO         | DOMINGUEZ        | ALVARO RAFAEL       |  62 |  H  | AADA610528HGTLML65 |
+|  179 | OC  | 303529 | LEON             | X                | OMAR                | 114 |  H  | LEXO090216HOCNXM09 |
+|  180 | JC  | 323116 | CASTRO           | GUERRERO         | CLAUDIA LUCINA      |  58 |  M  | CAGC650409MJCSRL67 |
+|  181 | EM  | 325484 | MORALES          | JIMENEZ          | EVA                 |  87 |  M  | MOJE360805MEMRMV30 |
+|  182 | CS  | 301280 | HERNANDEZ        | DIAZ             | ENRIQUE             |  78 |  H  | HEDE450203HCSRZN48 |
+|  183 | CC  | 317867 | ORTEGA           | SALAS            | CARMEN CLAUDIA      |  84 |  M  | OESC390326MCCRLR35 |
+|  184 | NL  | 311837 | ROJAS            | AGUIRRE          | JESUS               |  48 |  H  | ROAJ741123HNLJGS73 |
+|  185 | CS  | 307446 | SOLIS            | DE LA CRUZ       | YADIRA              |  25 |  M  | SOCY980525MCSLRD92 |
+|  186 | GR  | 326222 | SOSA             | ROJAS            | BLANCA NANCY        |   4 |  M  | SORB190107MGRSJLB8 |
+|  187 | GR  | 308034 | HERNANDEZ        | GUZMAN           | GUADALUPE           |  36 |  H  | HEGG871016HGRRZD83 |
+|  188 | DG  | 310007 | OROZCO           | X                | NANCY CAROLINA      |  19 |  M  | OOXN040507MDGRXNA5 |
+|  189 | NL  | 312755 | PACHECO          | ALVAREZ          | ADRIAN              | 110 |  H  | PAAA130226HNLCLD11 |
+|  190 | MS  | 312599 | AGUIRRE          | SERRANO          | ROCIO               |  57 |  M  | AUSR660928MMSGRC62 |
+|  191 | MX  | 324603 | MIRANDA          | MEJIA            | GABRIELA            |  35 |  M  | MIMG880906MMXRJB89 |
+|  192 | CL  | 314890 | HERNANDEZ        | VELAZQUEZ        | PABLO               |  23 |  H  | HEVP991204HCLRLB95 |
+|  193 | TC  | 318875 | CAMPOS           | ESPINOZA         | EFRAIN              |  95 |  H  | CAEE280309HTCMSF24 |
+|  194 | MX  | 326609 | RIOS             | RIVERA           | OMAR                |  62 |  H  | RIRO610410HMXSVM60 |
+|  195 | TS  | 319220 | NAVA             | NAVARRO          | JOSUE               |  41 |  H  | NANJ821023HTSVVS89 |
+|  196 | VZ  | 332562 | GUTIERREZ        | FLORES           | ABRAHAM             |   1 |  H  | GUFA211106HVZTLBC8 |
+|  197 | OC  | 309457 | GOMEZ            | LOPEZ            | LUIS                |   9 |  H  | GOLL131201HOCMPSB7 |
+|  198 | GR  | 304791 | LUNA             | JUAREZ           | ANA                 |  88 |  M  | LUJA350813MGRNRN37 |
+|  199 | SL  | 313308 | JIMENEZ          | X                | MARCELA             |  75 |  M  | JIXM471113MSLMXR46 |

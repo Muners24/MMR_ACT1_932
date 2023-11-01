@@ -28,6 +28,12 @@ int validStr(char str[]);
 
 //** Cadenas ******************************************************************************************************
 
+//Concatena una cadena con otra
+//Parametros:
+//-str2 Cadena donde se juntaran las cadenas
+//-str1 Cadena que se juntara a la anterior
+void strConcat(char str2[],char str1[]);
+
 //Convierte una cadena a mayusculas
 //Parametros:
 //-str  Cadena a convertir a mayusculas
@@ -431,3 +437,16 @@ void improvedBubbleSort(int vect[],int n)
     }
 }
 
+void strConcat(char str2[],char str1[])
+{
+    int j,k=0;
+    j=strlen(str2); 
+    str2[j++]=' '; 
+    while(str1[k]!='\0')    
+    {
+        str2[j]=str1[k];    
+        k++;
+        j++;
+    }
+    str2[j]='\0';  
+}

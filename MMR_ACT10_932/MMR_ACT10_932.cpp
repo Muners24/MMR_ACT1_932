@@ -171,27 +171,27 @@ int genMatri(StructAlum alumnos[],int i)
 void strConcat(char str2[],char str1[])
 {
     int j,k=0;
-    j=strlen(str2); //Calcula la longitud de la cadena principal
-    str2[j++]=' ';  //Cambia el caracter nulo por espacio
-    while(str1[k]!='\0')    //Se repite hasta que la cadena que se concatenara llegue al caracter nulo
+    j=strlen(str2); 
+    str2[j++]=' '; 
+    while(str1[k]!='\0')    
     {
-        str2[j]=str1[k];    //Despues del espacio se le asigna la segunda cadena a la primera
+        str2[j]=str1[k];    
         k++;
         j++;
     }
-    str2[j]='\0';   //Se asigna el caracter nulo despues de haber concatenado
+    str2[j]='\0';  
 }
 
 void genH_Name(StructAlum alumnos[],int i)
 {
     if(rand()%2)
     {
-        strcopy(alumnos[i].nombre,m_name[rand()%28]);   //Genera un nombre de la libria que contiene nombres
+        strcopy(alumnos[i].nombre,m_name[rand()%28]);   
     }
     else
     {
-        strcopy(alumnos[i].nombre,m_name[rand()%28]);   //Genera un nombre de la libria que contiene nombres
-        strConcat(alumnos[i].nombre,m_name[rand()%28]); //Concatena el primer nombre con otro generado de la libreria
+        strcopy(alumnos[i].nombre,m_name[rand()%28]);   
+        strConcat(alumnos[i].nombre,m_name[rand()%28]); 
     }
 }
 
@@ -199,18 +199,18 @@ void genM_Name(StructAlum alumnos[],int i)
 {
     if(rand()%2)
     {
-        strcopy(alumnos[i].nombre,m_name[rand()%28]);   //Genera un nombre de la libria que contiene nombres
+        strcopy(alumnos[i].nombre,m_name[rand()%28]);   
     }
     else
     {
-        strcopy(alumnos[i].nombre,m_name[rand()%28]);   //Genera un nombre de la libria que contiene nombres
-        strConcat(alumnos[i].nombre,m_name[rand()%28]); //Concatena el primer nombre con otro generado de la libreria
+        strcopy(alumnos[i].nombre,m_name[rand()%28]);   
+        strConcat(alumnos[i].nombre,m_name[rand()%28]); 
     }
 }
 
 void randAlum(StructAlum alumnos[],int i)
 {
-    int prob;   //se usa para controlar la probabilidad de tener 1 o 2 apellidos
+    int prob;   
     alumnos[i].status=rand()%2;
     alumnos[i].matricula=genMatri(alumnos,i);
     alumnos[i].sexo=(rand()%2)+1;
