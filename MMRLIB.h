@@ -68,6 +68,14 @@ void strcopy(char str2[],char str[]);
 //No requiere un limite para funcionar
 int validNumUnLimit(char txt[]);
 
+//Compara si dos cadenas son iguales
+//Parametros:
+//-str2 Primer cadena a comparar
+//-str1 Segunda cadena a comprarar
+//Devuelve:
+//1 Si son iguales
+//0 Si no son iguales
+
 //** Arreglos *******************************************************************************************************
 
 //** Asignacion **
@@ -145,6 +153,7 @@ int searchMatriz(int matriz[][NM],int pos[],int r,int c, int num);
 //** Metodos de ordenacion ***************************************************************************************
 
 void improvedBubbleSort(int vect[],int n);
+
 
 int validNum(char txt[],int limi,int lims)
 {
@@ -450,3 +459,5 @@ void strConcat(char str2[],char str1[])
     }
     str2[j]='\0';  
 }
+
+
