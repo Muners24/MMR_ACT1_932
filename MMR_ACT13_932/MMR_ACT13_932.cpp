@@ -46,7 +46,7 @@ void printEmpleadoTab(Tdato empleado);
 //case 7
 void genArchivoTxt(Tdato vect[],int i);
 //case 8
-void printArchTxt(Tdato vect[],int i);
+void printArchTxt(void);
 //case 9
 void genArchivoBin(Tdato vect[],int i);
 //case 10
@@ -63,7 +63,7 @@ int main()
 
 int msgs(void)
 {
-    printf("Menu\n\n");
+    printf(" Menu\n\n");
     printf(" 1) Agregar\n");
     printf(" 2) Editar Reistro\n");
     printf(" 3) Eliminar Registro\n");
@@ -86,7 +86,6 @@ void menu(void)
     int op;
     int orden=0,ordenMetodo=0,cargBin=1,del=0;
     int i=0;
-
     fa=fopen("registrosbin.dll","rb");
     if(fa)
     {
@@ -99,7 +98,6 @@ void menu(void)
         system("cls");
         op=msgs();
         system("cls");
-
         switch(op)
         {
             case 1:
@@ -136,7 +134,7 @@ void menu(void)
                 genArchivoTxt(empleados,i);
                 break;
             case 8:
-                printArchTxt(empleados,i);
+                printArchTxt();
                 break;
             case 9:
                 genArchivoBin(empleados,i);
@@ -296,7 +294,7 @@ void editarReg(Tdato vect[],int i,int orden)
             pos=buscarTBin(vect,i,pos);
             if(pos!=-1)
             {
-                if(vect[i].status)
+                if(vect[pos].status)
                 {
                     printEmpleadoReg(vect[pos]);
                     editMenu(vect,pos);
@@ -313,10 +311,10 @@ void editarReg(Tdato vect[],int i,int orden)
         }
         else
         {
-            pos=buscarTBin(vect,i,pos);
+            pos=buscarTSec(vect,i,pos);
             if(pos!=-1)
             {
-                if(vect[i].status)
+                if(vect[pos].status)
                 {
                     printEmpleadoReg(vect[pos]);
                     editMenu(vect,pos);
@@ -327,7 +325,7 @@ void editarReg(Tdato vect[],int i,int orden)
                 }
             }
             else
-            {
+            {//322010
                 printf("\nEse empleado no existe\n");
             }
         }
@@ -357,7 +355,7 @@ void editMenu(Tdato vect[],int pos)
     switch(op)
     {
         case 1:
-            printf("Editar puesto\n\nIngresa el puesto: ");
+            printf("Editar puesto\n\n");
             editPuesto(vect,pos);
             printf("\nSe edito el campo deseado\n");
             break;
@@ -377,13 +375,12 @@ void editMenu(Tdato vect[],int pos)
             printf("\nSe edito el campo deseado\n");
             break;
         case 5:
-            printf("Editar telefono\n\nIngresa el nuevo telefono: 646");
+            printf("Editar telefono\n\n");
             vect[pos].telefono+=validNumF("Ingresa el telefono: 646",0,9999999);
             printf("\nSe edito el campo deseado\n");
             break;
         case 6:
             printf("Editar sexo\n\n");
-            printf("Elige una opcion: (1:Hombre 2:Mujer)");
             s=validNum("(1:Hombre 2:Mujer) Elige una opcion: ",1,2);
             if(s==1)
             {
@@ -398,7 +395,7 @@ void editMenu(Tdato vect[],int pos)
     }
     
 }
-
+//308895 312946
 void editPuesto(Tdato vect[],int pos)
 {
     char pst[12][L]={
@@ -569,7 +566,7 @@ void printEmpleadoReg(Tdato empleado)
     printf("Apellido Paterno: %s\n",empleado.apPat);
     printf("Apellido Materno: %s\n",empleado.apMat);
     printf("Nombre: %s\n",empleado.nombre);
-    printf("Telefono: %.0f",empleado.telefono);
+    printf("Telefono: %.0f\n",empleado.telefono);
     printf("Sexo: ");
     if(empleado.sexo=='H')
     {
@@ -611,7 +608,7 @@ void printEmpleados(Tdato vect[],int i)
     int j,k=0;
     if(i>0)
     {                    
-        printf("| No   | No.Empleado |         Puesto         | Apellido Paterno | Apellido Materno | Nombre              |  Telefono  |  Sexo     |\n");
+        printf("| No   | No.Empleado |         Puesto         | Apellido Paterno | Apellido Materno | Nombre               |  Telefono  |  Sexo     |\n");
         for(j=0;j<i;j++)
         {
             if(vect[j].status)
@@ -630,7 +627,7 @@ void printEmpleados(Tdato vect[],int i)
 
 void printEmpleadoTab(Tdato empleado)
 {
-    printf("| %11d | %-22s | %-16s | %-17s| %-19s | %.0f |",empleado.NoEmpleado,empleado.puesto,empleado.apPat,empleado.apMat,empleado.nombre,empleado.telefono);
+    printf("| %11d | %-22s | %-16s | %-17s| %-20s | %.0f |",empleado.NoEmpleado,empleado.puesto,empleado.apPat,empleado.apMat,empleado.nombre,empleado.telefono);
     if(empleado.sexo=='H')
     {
         printf(" MASCULINO |\n");
@@ -664,14 +661,14 @@ void genArchivoTxt(Tdato vect[],int i)
         if(!fa)
         {
             fa=fopen(name,"a");
-            fprintf(fa,"| No   | No.Empleado |         Puesto         | Apellido Paterno | Apellido Materno | Nombre              |  Telefono  |  Sexo     |\n");
+            fprintf(fa,"| No   | No.Empleado |         Puesto         | Apellido Paterno | Apellido Materno | Nombre               |  Telefono  |  Sexo     |\n");
             k=0;
             for(j=0;j<i;j++)
             {
                 if(vect[j].status)
                 {
                     fprintf(fa,"| %4d ",k);
-                    fprintf(fa,"| %11d | %-22s | %-16s | %-17s| %-19s | %.0f |",vect[j].NoEmpleado,vect[j].puesto,vect[j].apPat,vect[j].apMat,vect[j].nombre,vect[j].telefono);
+                    fprintf(fa,"| %11d | %-22s | %-16s | %-17s| %-20s | %.0f |",vect[j].NoEmpleado,vect[j].puesto,vect[j].apPat,vect[j].apMat,vect[j].nombre,vect[j].telefono);
                     if(vect[j].sexo=='H')
                     {
                         fprintf(fa," MASCULINO |\n");
@@ -683,7 +680,7 @@ void genArchivoTxt(Tdato vect[],int i)
                     k++;
                 }
             }
-
+            printf("\nSe genero el archivo: %s\n",name);
         }
         else
         {
@@ -698,14 +695,13 @@ void genArchivoTxt(Tdato vect[],int i)
 }
 
 //case 8
-void printArchTxt(Tdato vect[],int i)
+void printArchTxt(void)
 {
     FILE *fa;
     char name[L];
     int len;
     char c;
     printf("Mostrar archivo\n\n");
-   
     printf("Ingresa el nombre del archivo de texto: ");
     gets(name);
     len=strlen(name);
@@ -730,7 +726,6 @@ void printArchTxt(Tdato vect[],int i)
     {
         printf("\nEl nombre no coincide con un archivo existente\n");
     }
-    
 }
 
 //case 9
@@ -809,6 +804,7 @@ int cargarArchivoBin(Tdato vect[],int i)
     }
     return 0;
 }
+
 //case 11
 void printDel(void)
 {
@@ -819,7 +815,7 @@ void printDel(void)
     if(fa)
     {
         printf("\nEmpleados eliminados\n\n");
-        printf("| No   | No.Empleado |         Puesto         | Apellido Paterno | Apellido Materno | Nombre              |  Telefono  |  Sexo     |\n");
+        printf("| No   | No.Empleado |         Puesto         | Apellido Paterno | Apellido Materno | Nombre               |  Telefono  |  Sexo     |\n");
         k=0;
         while(!feof(fa))
         {
