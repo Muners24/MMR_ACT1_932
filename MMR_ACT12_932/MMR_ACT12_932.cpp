@@ -1096,6 +1096,7 @@ void genArchivo(StructAlum alumnos[],int i)
     fclose(fa);
 
 }
+
 void printAlumTab(StructAlum alumnos)
 {
     printf("| %9d | %-16s | %-17s| %-19s | %4d |",alumnos.matricula,alumnos.apPat,alumnos.apMat,alumnos.nombre,alumnos.edad);
