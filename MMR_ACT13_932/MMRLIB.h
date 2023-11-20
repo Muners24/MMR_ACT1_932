@@ -16,7 +16,6 @@ typedef int Tkey;
 
 typedef struct _empleado{
     Tkey key;
-    int NoEmpleado;
     char nombre[LN];
     char apPat[L];
     char apMat[L];

@@ -11,7 +11,6 @@
 typedef struct _empleado{
     int status;
     Tkey key;
-    int NoEmpleado;
     char sexo;
     char nombre[LN];
     char apPat[L];
@@ -219,8 +218,7 @@ void genRegRand(Tdato vect[],int i)
     int j;
     double num;
     vect[i].status=1;
-    vect[i].NoEmpleado=genKey(vect,i,300000,399999);
-    vect[i].key=vect[i].NoEmpleado;
+    vect[i].key=genKey(vect,i,300000,399999);
 
     for(j=0;j<10;j++)
     {
@@ -561,7 +559,7 @@ void buscarEmpleado(Tdato vect[],int i,int orden)
 
 void printEmpleadoReg(Tdato empleado)
 {
-    printf("\nNo. Empleado: %d\n",empleado.NoEmpleado);
+    printf("\nNo. Empleado: %d\n",empleado.key);
     printf("Puesto: %s\n",empleado.puesto);
     printf("Apellido Paterno: %s\n",empleado.apPat);
     printf("Apellido Materno: %s\n",empleado.apMat);
@@ -627,7 +625,7 @@ void printEmpleados(Tdato vect[],int i)
 
 void printEmpleadoTab(Tdato empleado)
 {
-    printf("| %11d | %-22s | %-16s | %-17s| %-20s | %.0f |",empleado.NoEmpleado,empleado.puesto,empleado.apPat,empleado.apMat,empleado.nombre,empleado.telefono);
+    printf("| %11d | %-22s | %-16s | %-17s| %-20s | %.0f |",empleado.key,empleado.puesto,empleado.apPat,empleado.apMat,empleado.nombre,empleado.telefono);
     if(empleado.sexo=='H')
     {
         printf(" MASCULINO |\n");
@@ -668,7 +666,7 @@ void genArchivoTxt(Tdato vect[],int i)
                 if(vect[j].status)
                 {
                     fprintf(fa,"| %4d ",k);
-                    fprintf(fa,"| %11d | %-22s | %-16s | %-17s| %-20s | %.0f |",vect[j].NoEmpleado,vect[j].puesto,vect[j].apPat,vect[j].apMat,vect[j].nombre,vect[j].telefono);
+                    fprintf(fa,"| %11d | %-22s | %-16s | %-17s| %-20s | %.0f |",vect[j].key,vect[j].puesto,vect[j].apPat,vect[j].apMat,vect[j].nombre,vect[j].telefono);
                     if(vect[j].sexo=='H')
                     {
                         fprintf(fa," MASCULINO |\n");
@@ -742,8 +740,8 @@ void genArchivoBin(Tdato vect[],int i)
             fa=fopen("reigstrosbin.tmp","rb");
             if(fa)
             {
-                remove("registros.tmp");
-                rename("registrosbin.dll","registros.tmp");
+                remove("registrosbin.tmp");
+                rename("registrosbin.dll","registrosbin.tmp");
                 fa=fopen("registrosbin.dll","wb");
                 for(j=0;j<i;j++)
                 {
@@ -753,7 +751,7 @@ void genArchivoBin(Tdato vect[],int i)
             }
             else
             {
-                rename("registrosbin.dll","registros.tmp");
+                rename("registrosbin.dll","registrosbin.tmp");
                 fa=fopen("registrosbin.dll","wb");
                 for(j=0;j<i;j++)
                 {
@@ -791,7 +789,6 @@ int cargarArchivoBin(Tdato vect[],int i)
         while(!feof(fa))
         {
             fread(&vect[j],sizeof(vect[j]),1,fa);
-            vect[j].key=vect[j].NoEmpleado;
             j++;
         }
         printf("\nSe cargo el archivo binario datos.dll a los registros\n");
