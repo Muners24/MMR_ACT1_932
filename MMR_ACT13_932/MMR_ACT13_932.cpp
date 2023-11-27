@@ -776,7 +776,7 @@ void genArchivoBin(Tdato vect[],int i)
         printf("\nAun no hay empleados registrados\n");
     }
 }
-
+ 
 //case 10
 int cargarArchivoBin(Tdato vect[],int i)
 {
