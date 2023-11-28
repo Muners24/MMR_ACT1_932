@@ -1,10 +1,15 @@
+/* Mejía Martínez, Ramón    372099                                                                                                                                                           */
+/* 28 de noviembre de 2023                                                                                                                                                                   */
+/* Programa de gestion de empleados usando structs, distintos metodos de busqueda, ordenacion y uso de archivos de texto y binarios, usando como almacenamiento un archivo binario indeaxo   */
+/* MMR_ACT13_932                                                                                                                                                                             */
 
 #include "C:\Users\ramon\OneDrive\Escritorio\MMR_ACT1_932\MMR_ACT14_932\MMRLIB.h"
 #include <stddef.h>
+#include <string.h>
 
 #define ELIMINAR 1
 #define BUSCAR 0
-#define ENCABEZADO "| NO   | NO EMP | PUESTO                 | APELLIDO PATERNO | APELLIDO MATERNO  | NOMBRE               | TELEFONO   | EDAD | SEXO       | ESTADO |"
+#define ENCABEZADO "| NO   | NO EMP | PUESTO                 | APELLIDO PATERNO | APELLIDO MATERNO  | NOMBRE               | TELEFONO   | EDAD | SEXO       | EST |"
 typedef int Tkey;
 
 typedef struct _Wrkr{
@@ -41,7 +46,7 @@ int BuscarWrkr(Tindex vect[],int i,int orden);
 int BuscarSecIndex(Tindex vect[],int i,Tkey num);
 int BuscarBinIndex(Tindex vect[],int i,Tkey num);
 int BuscarSecTelIndex(Tindex vect[],int i,int num);
-int DelWrkr(Tindex vect[],int i,int orden);
+void DelWrkr(Tindex vect[],int i,int orden);
 void PrintRegReg(int indice,int razon);
 void OrdenarIndex(Tindex vect[],int i,int MetodoOrden);
 void BubbleSortIndex(Tindex vect[],int n);
@@ -57,6 +62,7 @@ void GenArchivoTxt(Tindex vect[],int i,int &orden,int MetodoOrden);
 void GenArchTxtNormal(char name[]);
 void GenArchTxtOrden(Tindex vect[],int i,char name[]);
 void PrintArchTxt(char name[]);
+void empaquetar(Tindex vect[],int i,int resplado);
 
 int main()
 {
@@ -68,7 +74,6 @@ int main()
     if(fa)
     {
         fscanf(fa,"%d",&REG);
-
         fclose(fa);
         menu(REG);
     }
@@ -97,8 +102,8 @@ int msgs(void)
 
 void menu(int REG)
 {
-    int i=0,j=0;
-    REG*=1.25;
+    int i=0,j=0,respaldo=0;
+    REG;
     int op;
     int orden=0,MetodoOrden=0;
     Tindex trabajadores[REG];
@@ -119,12 +124,23 @@ void menu(int REG)
             }
             j++;
         }
+        fclose(fa);
+        if(i>3500)
+        {
+            if(i>3750)
+            {
+                MetodoOrden=2;
+            }
+            else
+            {
+                MetodoOrden=1;
+            }
+        }
         printf("\nSe cargo el archivo binario\n");
         system("pause");
         do
         {
             system("cls");
-            printf("%d %d",i,REG);
             op=msgs();
             system("cls");
             switch(op)
@@ -134,9 +150,9 @@ void menu(int REG)
                     {
                         GenWrkr(trabajadores,i++);
                         orden=0;
-                        if(i>1400)
+                        if(i>3500)
                         {
-                            if(i>2800)
+                            if(i>3750)
                             {
                                 MetodoOrden=2;
                             }
@@ -150,7 +166,6 @@ void menu(int REG)
                     {
                         printf("\nLa capacidad de registros llego al limite\n");
                     }
-                    
                     break;
                 case 2: 
                     DelWrkr(trabajadores,i,orden);
@@ -175,9 +190,9 @@ void menu(int REG)
                 case 6:
                     GenArchivoTxt(trabajadores,i,orden,MetodoOrden);
                     break;
-                //case 7:
-
-                //    break;
+                case 7:
+                    empaquetar(trabajadores,i,respaldo++);
+                    break;
             }
             printf("\n");
             system("pause");
@@ -187,18 +202,15 @@ void menu(int REG)
     {
         printf("\nEl archivo binario de registros no existe\n");
     }
-        
-    
 }
 
 //case 1
-void GenWrkr(Tindex vect[],int i)
+void GenWrkr(Tindex vect[],int i)   
 {
     FILE *fa;
     TWrkr reg;
-    int s;
+    int s,num;
     int j;
-    double num;
     reg.status=1;
     reg.key=GenKey(vect,i,300000,399999);
     vect[i].key=reg.key;
@@ -243,8 +255,6 @@ void GenWrkr(Tindex vect[],int i)
         printf("\nNo se pudo guardar el registro en el archivo\n");
         printf("\nEl archivo binario no existe\n");
     }
-
-    
 }
 
 void GenPuesto(char str[])
@@ -688,7 +698,7 @@ int BuscarBinIndex(Tindex vect[],int i,Tkey num)
 }
 
 //case 2
-int DelWrkr(Tindex vect[],int i,int orden)
+void DelWrkr(Tindex vect[],int i,int orden)
 {
     int pos;
     int del;
@@ -751,6 +761,7 @@ void PrintRegReg(int indice,int razon)
                         fseek(fa,-sizeof(TWrkr),SEEK_CUR);
                         fseek(fa,offsetof(TWrkr,status),SEEK_CUR);
                         fwrite(&del,sizeof(int),1,fa);
+                        printf("\nSe elimino el empleado\n");
                     }
                 }
                 else
@@ -1023,9 +1034,9 @@ void PrintArchBin(void)
         {
             if(reg.status)
             {
-                printf(" %-4d ",++k);
+                printf("| %-4d ",++k);
                 //getch();
-                printf("| %6d | %-22s | %-16s | %-17s | %-20s | 646%-7d | %-4d | %-10s | %s |\n",reg.key,reg.puesto,reg.apPat,reg.apMat,reg.name,reg.telefono,reg.edad,reg.sexo,reg.estado);
+                printf("| %6d | %-22s | %-16s | %-17s | %-20s | 646%-7d | %-4d | %-10s | %s  |\n",reg.key,reg.puesto,reg.apPat,reg.apMat,reg.name,reg.telefono,reg.edad,reg.sexo,reg.estado);
             }
         }
         fclose(fa);
@@ -1052,8 +1063,8 @@ void PrintBinIndex(Tindex vect[],int i)
             {
                 if(reg.status)
                 {
-                    printf(" %-4d ",++k);
-                    printf("| %6d | %-22s | %-16s | %-17s | %-20s | 646%-7d | %-4d | %-10s | %s |\n",reg.key,reg.puesto,reg.apPat,reg.apMat,reg.name,reg.telefono,reg.edad,reg.sexo,reg.estado);
+                    printf("| %-4d ",++k);
+                    printf("| %6d | %-22s | %-16s | %-17s | %-20s | 646%-7d | %-4d | %-10s | %s  |\n",reg.key,reg.puesto,reg.apPat,reg.apMat,reg.name,reg.telefono,reg.edad,reg.sexo,reg.estado);
                 }
             }
         }
@@ -1128,7 +1139,6 @@ void GenArchivoTxt(Tindex vect[],int i,int &orden,int MetodoOrden)
                 PrintArchTxt(name);
             }
             break;
-        
     }
 }
 
@@ -1146,7 +1156,7 @@ void GenArchTxtNormal(char name[])
         {
             if(reg.status)
             {
-                fprintf(txt,"| %-4d | %6d | %-22s | %-16s | %-17s | %-20s | 646%-7d | %-4d | %-10s | %s |\n",++k,reg.key,reg.puesto,reg.apPat,reg.apMat,reg.name,reg.telefono,reg.edad,reg.sexo,reg.estado);
+                fprintf(txt,"| %-4d | %6d | %-22s | %-16s | %-17s | %-20s | 646%-7d | %-4d | %-10s | %s  |\n",++k,reg.key,reg.puesto,reg.apPat,reg.apMat,reg.name,reg.telefono,reg.edad,reg.sexo,reg.estado);
             }
         }
         fclose(txt);
@@ -1176,8 +1186,8 @@ void GenArchTxtOrden(Tindex vect[],int i,char name[])
             {
                 if(reg.status)
                 {
-                    fprintf(txt," %-4d ",++k);
-                    fprintf(txt,"| %6d | %-22s | %-16s | %-17s | %-20s | 646%-7d | %-4d | %-10s | %s |\n",reg.key,reg.puesto,reg.apPat,reg.apMat,reg.name,reg.telefono,reg.edad,reg.sexo,reg.estado);
+                    fprintf(txt,"| %-4d ",++k);
+                    fprintf(txt,"| %6d | %-22s | %-16s | %-17s | %-20s | 646%-7d | %-4d | %-10s | %s  |\n",reg.key,reg.puesto,reg.apPat,reg.apMat,reg.name,reg.telefono,reg.edad,reg.sexo,reg.estado);
                 }
             }
         }
@@ -1210,7 +1220,86 @@ void PrintArchTxt(char name[])
     }
 }
 //case 8
-void empaquetar(Tindex vect[],int i)
+void empaquetar(Tindex vect[],int i,int resplado)
 {
-
+    FILE *bin,*binbak,*bindel,*tmp;
+    TWrkr reg;
+    char binBakName[30];
+    char c[2];
+    bin=fopen("datos.dat","rb");
+    if(bin)
+    {
+        fclose(bin);
+        rename("datos.dat","datos.tmp");
+        tmp=fopen("datos.tmp","rb");
+        if(tmp)
+        {
+            if(resplado==0)
+            {
+                bin=fopen("datos.dat","wb");
+                binbak=fopen("datos.bak","wb");
+                bindel=fopen("datosdel.bak","ab");
+                //respaldo
+                while(fread(&reg,sizeof(TWrkr),1,tmp))
+                {
+                    if(reg.status)
+                    {
+                        fwrite(&reg,sizeof(TWrkr),1,bin);
+                        fwrite(&reg,sizeof(TWrkr),1,binbak);
+                    }
+                    else
+                    {
+                        fwrite(&reg,sizeof(TWrkr),1,bindel);
+                        fwrite(&reg,sizeof(TWrkr),1,binbak);
+                    }
+                }
+                printf("\nSe empaqueto correctamente\n");
+                fclose(tmp);
+                fclose(bindel);
+                fclose(binbak);
+                fclose(bin);
+                
+            }
+            else
+            {
+                if(resplado>0)
+                {
+                    strcpy(binBakName,"datos");
+                    strcat(binBakName,itoa(resplado,c,10));
+                    strcat(binBakName,".bak");
+                    bin=fopen("datos.dat","wb");
+                    binbak=fopen(binBakName,"wb");
+                    bindel=fopen("datosdel.bak","a");
+                    //respaldo
+                    while(fread(&reg,sizeof(TWrkr),1,tmp))
+                    {
+                        if(reg.status)
+                        {
+                            fwrite(&reg,sizeof(TWrkr),1,bin);
+                            fwrite(&reg,sizeof(TWrkr),1,binbak);
+                        }
+                        else
+                        {//332686
+                            fwrite(&reg,sizeof(TWrkr),1,bindel);
+                            fwrite(&reg,sizeof(TWrkr),1,binbak);
+                        }
+                    }
+                    printf("\nSe empaqueto correctamente\n");
+                    fclose(tmp);
+                    fclose(bindel);
+                    fclose(binbak);
+                    fclose(bin);
+                }
+            }
+            remove("datos.tmp");
+        }
+        else
+        {
+            printf("\nError al empaquetar\n");
+        }
+    }
+    else
+    {
+        printf("\nEl archivo binario principal no existe\n");
+    }
 }
